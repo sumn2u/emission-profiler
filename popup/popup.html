@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Power Profiler</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⚡ Power Profiler</h1>
+      <div class="status" id="status">Idle</div>
+    </header>
+    
+    <div class="controls">
+      <button id="startBtn" class="btn btn-primary">Start Profiling</button>
+      <button id="stopBtn" class="btn btn-secondary" disabled>Stop Profiling</button>
+    </div>
+    
+    <div class="metrics">
+      <div class="metric-card">
+        <div class="metric-label">Current Power</div>
+        <div class="metric-value" id="currentPower">--</div>
+        <div class="metric-unit" id="currentPowerUnit">W</div>
+      </div>
+      
+      <div class="metric-card">
+        <div class="metric-label">Energy Used</div>
+        <div class="metric-value" id="energyUsed">--</div>
+        <div class="metric-unit" id="energyUnit">Wh</div>
+      </div>
+      
+      <div class="metric-card">
+        <div class="metric-label">CO₂ Emissions</div>
+        <div class="metric-value" id="co2Emissions">--</div>
+        <div class="metric-unit" id="co2Unit">gCO₂e</div>
+      </div>
+    </div>
+    
+    <div class="chart-container">
+      <canvas id="powerChart" width="300" height="150"></canvas>
+    </div>
+    
+    <div class="details">
+      <h3>Session Details</h3>
+      <div class="detail-row">
+        <span>Duration:</span>
+        <span id="sessionDuration">0s</span>
+      </div>
+      <div class="detail-row">
+        <span>Samples:</span>
+        <span id="sampleCount">0</span>
+      </div>
+      <div class="detail-row">
+        <span>Avg Power:</span>
+        <span id="avgPower">--</span>
+      </div>
+      
+      <div class="settings">
+        <h3>Settings</h3>
+        <div class="setting">
+          <label for="co2Intensity">CO₂ Intensity (g/kWh):</label>
+          <input type="number" id="co2Intensity" value="475" min="0" max="1000">
+        </div>
+        <button id="saveSettings" class="btn btn-small">Save</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
