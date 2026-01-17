@@ -178,3 +178,12 @@ h1 {
   width: 100% !important;
   height: 150px !important;
 }
+
+#powerChartSVG {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.chart-container {
+  margin-top: 15px;
+}

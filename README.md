@@ -13,7 +13,7 @@ A Chrome extension that monitors web page power consumption and estimates CO₂ 
 
 ## 📸 Screenshots
 
-coming soon. 
+![Screenshot of the widget](./screenshot.png)
 
 *Popup interface showing real-time metrics and historical chart*
 
